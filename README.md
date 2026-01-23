@@ -48,6 +48,7 @@ docker run --gpus all \
 | `MAX_MODEL_LEN` | Maximum context length (e.g., 128000 for Kimi K2) | Auto-detected |
 | `DTYPE` | Model data type (auto, float16, bfloat16, float32) | `auto` |
 | `TRUST_REMOTE_CODE` | Allow remote code execution (required for some models) | `false` |
+| `VLLM_NIGHTLY` | Upgrade vLLM to nightly build at startup (needed for GLM-4.7) | `false` |
 
 ### Performance Tuning
 

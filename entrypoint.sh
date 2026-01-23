@@ -7,6 +7,12 @@ if [ -n "${STARTUP_DELAY}" ]; then
     sleep "${STARTUP_DELAY}"
 fi
 
+# Upgrade vLLM to nightly if requested (needed for GLM-4.7 support)
+if [ "${VLLM_NIGHTLY}" = "true" ]; then
+    echo "Upgrading vLLM to nightly build..."
+    pip install -U vllm --pre --extra-index-url https://wheels.vllm.ai/nightly
+fi
+
 # Handle empty HF_TOKEN
 if [ -z "${HF_TOKEN:-}" ]; then
     unset HF_TOKEN
