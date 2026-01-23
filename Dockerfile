@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=vllm/vllm-openai:v0.13.0
+ARG BASE_IMAGE=vllm/vllm-openai:v0.14.0
 FROM ${BASE_IMAGE}
 
 # Install additional dependencies for our customizations
